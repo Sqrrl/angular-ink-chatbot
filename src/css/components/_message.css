@@ -1,0 +1,22 @@
+.message {
+  display: flex;
+  width: 100%;
+}
+
+.message--user {
+  justify-content: flex-end;
+
+  & > .message__inner {
+    background-color: var(--ff-primary);
+    color: var(--ff-text-light);
+  }
+}
+
+.message__inner {
+  display: inline-block;
+  max-width: 90%;
+  background-color: #fff;
+  border-radius: var(--ff-small-border-radius);
+  padding: var(--ff-spacing-m) var(--ff-spacing-l);
+  box-shadow: var(--ff-drop-shadow);
+}

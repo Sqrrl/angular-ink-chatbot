@@ -1,0 +1,5 @@
+@custom-media --from-phone-landscape only screen and (min-width: 544px);
+@custom-media --from-tablet only screen and (min-width: 768px);
+@custom-media --from-desktop only screen and (min-width: 992px);
+@custom-media --from-large-desktop only screen and (min-width: 1200px);
+@custom-media --from-hd-desktop only screen and (min-width: 1600px);

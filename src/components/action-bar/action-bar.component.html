@@ -1,0 +1,14 @@
+<div class="action-bar">
+  <ng-template [ngIf]="userInteraction?.type === 'default'">
+    <div class="action-bar__item" *ngFor="let choice of userInteraction.choices">
+      <button class="action-bar__button" (click)="trigger(choice)">{{choice.text}}</button>
+    </div>
+  </ng-template>
+
+  <ng-template [ngIf]="userInteraction?.type === 'text'">
+    <div class="action-bar__item">
+      <input class="action-bar__input" type="text" [(ngModel)]="value" [placeholder]="userInteraction?.placeholder"
+             (keyup.enter)="trigger(value)" #input>
+    </div>
+  </ng-template>
+</div>

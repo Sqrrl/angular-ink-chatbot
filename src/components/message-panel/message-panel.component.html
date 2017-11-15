@@ -1,0 +1,11 @@
+<section class="message-panel">
+  <aside class="message-panel__avatar">
+    <img src="../../assets/images/robot.png" alt="">
+  </aside>
+  <div class="message-panel__messages">
+    <bot-message *ngFor="let storyPoint of storyPoints" [storyPoint]="storyPoint"></bot-message>
+  </div>
+  <div class="message-panel__action-bar">
+    <bot-action-bar [userInteraction]="currentUserInteraction"></bot-action-bar>
+  </div>
+</section>
