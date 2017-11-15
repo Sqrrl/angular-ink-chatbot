@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import * as animejs from 'animejs';
+
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { StoryPoint } from '../../interfaces/story-point.interface';
 
 @Component({
@@ -8,7 +10,21 @@ import { StoryPoint } from '../../interfaces/story-point.interface';
 export class MessageComponent implements OnInit {
   @Input() public storyPoint: StoryPoint;
 
+  @ViewChild('bubble') private bubbleElementRef: ElementRef;
+
   constructor() {}
 
-  public ngOnInit() {}
+  public ngOnInit() {
+    animejs({
+      targets: this.bubble,
+      opacity: [0, 1],
+      scaleX: [0, 1],
+      duration: 800,
+      elasticity: 400
+    });
+  }
+
+  get bubble(): HTMLElement {
+    return this.bubbleElementRef.nativeElement;
+  }
 }

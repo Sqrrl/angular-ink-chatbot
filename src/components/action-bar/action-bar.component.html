@@ -1,4 +1,4 @@
-<div class="action-bar">
+<div class="action-bar" #bar>
   <ng-template [ngIf]="userInteraction?.type === 'default'">
     <div class="action-bar__item" *ngFor="let choice of userInteraction.choices">
       <button class="action-bar__button" (click)="trigger(choice)">{{choice.text}}</button>
