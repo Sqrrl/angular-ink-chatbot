@@ -7,4 +7,5 @@ export interface UserInteraction {
   placeholder?: string;
   stateVar?: string;
   type?: UserInteractionType;
+  validator?: string;
 }

@@ -7,8 +7,8 @@
 
   <ng-template [ngIf]="userInteraction?.type === 'text'">
     <div class="action-bar__item">
-      <input class="action-bar__input" type="text" [(ngModel)]="value" [placeholder]="userInteraction?.placeholder"
-             (keyup.enter)="trigger(value)" #input>
+      <input class="action-bar__input" type="text" [(ngModel)]="inputValue" [placeholder]="userInteraction?.placeholder"
+             (keyup.enter)="trigger(inputValue)" #input>
     </div>
   </ng-template>
 </div>

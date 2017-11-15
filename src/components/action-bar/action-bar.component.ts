@@ -13,12 +13,16 @@ export class ActionBarComponent implements OnInit, OnChanges {
 
   @ViewChild('input') public inputElementRef: ElementRef;
 
+  public inputValue: string;
+
   constructor(private storyService: StoryService) {}
 
   public ngOnInit() {}
 
   public ngOnChanges(changes: SimpleChanges) {
     if (changes.userInteraction instanceof SimpleChange) {
+      this.inputValue = '';
+
       if (changes.userInteraction.currentValue && changes.userInteraction.currentValue.type === UserInteractionType.TEXT) {
         setTimeout(() => {
           this.inputElementRef.nativeElement.focus();

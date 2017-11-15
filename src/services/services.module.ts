@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoryService } from './story.service';
 import { UserInteractionHandlerService } from './user-interaction-handler.service';
+import { UserInteractionValidatorService } from './user-interaction-validator.service';
 
 @NgModule({
   imports: [
@@ -9,7 +10,8 @@ import { UserInteractionHandlerService } from './user-interaction-handler.servic
   ],
   providers: [
     StoryService,
-    UserInteractionHandlerService
+    UserInteractionHandlerService,
+    UserInteractionValidatorService
   ]
 })
 export class ServicesModule { }

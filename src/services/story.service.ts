@@ -10,6 +10,7 @@ import { UserInteraction } from '../interfaces/user-interaction.interface';
 import { UserInteractionType } from '../enums/choice-type.enum';
 import { StoryPointSender } from '../enums/story-point-sender.enum';
 import { UserInteractionHandlerService } from './user-interaction-handler.service';
+import { UserInteractionValidatorService } from './user-interaction-validator.service';
 
 @Injectable()
 export class StoryService {
@@ -20,7 +21,10 @@ export class StoryService {
   public story: any;
   public storyPoints: any[];
 
-  constructor(private userInteractionHandlerService: UserInteractionHandlerService) {
+  constructor(
+    private userInteractionHandlerService: UserInteractionHandlerService,
+    private userInteractionValidatorService: UserInteractionValidatorService
+  ) {
     this.events = new Subject();
     this.story = new inkjs.Story(require('../ink/story.json'));
     this.storyPoints = [];
@@ -39,6 +43,11 @@ export class StoryService {
 
   public triggerUserInteraction(value: Choice | string) {
     if (typeof value === 'string') {
+      if (this.currentUserInteraction.validator) {
+        const validationError = this.userInteractionValidatorService.validate(this.currentUserInteraction.validator, value);
+        this.story.variablesState.$('validationError', validationError || '');
+      }
+
       if (this.currentUserInteraction.handler) {
         this.userInteractionHandlerService.handle(this.currentUserInteraction.handler, value);
       }
