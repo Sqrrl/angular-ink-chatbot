@@ -110,7 +110,7 @@ export class StoryService {
   }
 
   private buildUserInteractionFromChoices(choices: Choice[]): UserInteraction {
-    const currentTag = this.story.currentTags ? this.story.currentTags[0] : '{}';
+    const currentTag = this.story.currentTags.length > 0 ? JSON.parse(this.story.currentTags[0]) : {};
 
     choices = choices.map(c => {
       return {
@@ -122,6 +122,6 @@ export class StoryService {
     return Object.assign({
       choices: choices,
       type: UserInteractionType.DEFAULT
-    }, JSON.parse(currentTag).userInteraction);
+    }, currentTag.userInteraction || {});
   }
 }
