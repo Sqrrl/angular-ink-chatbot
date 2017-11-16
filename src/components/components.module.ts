@@ -4,10 +4,12 @@ import { MessagePanelComponent } from './message-panel/message-panel.component';
 import { MessageComponent } from './message/message.component';
 import { ActionBarComponent } from './action-bar/action-bar.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesModule } from '../directives/directives.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    DirectivesModule,
     FormsModule
   ],
   declarations: [
