@@ -7,8 +7,8 @@
   justify-content: flex-end;
 
   & > .message__inner {
-    background-color: var(--ff-primary);
     color: var(--ff-text-light);
+    background-color: var(--ff-primary);
     transform-origin: right;
   }
 }
@@ -16,9 +16,9 @@
 .message__inner {
   display: inline-block;
   max-width: 90%;
-  background-color: #fff;
-  border-radius: var(--ff-small-border-radius);
   padding: var(--ff-spacing-m) var(--ff-spacing-l);
-  box-shadow: var(--ff-drop-shadow);
+  border-radius: var(--ff-small-border-radius);
+  background-color: #fff;
   transform-origin: left;
+  box-shadow: var(--ff-drop-shadow);
 }

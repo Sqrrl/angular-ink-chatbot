@@ -1,6 +1,6 @@
 .container {
-  margin: 0 auto;
   max-width: 700px;
+  margin: 0 auto;
   padding-right: var(--ff-bleed-x);
   padding-left: var(--ff-bleed-x);
 }
