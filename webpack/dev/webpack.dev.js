@@ -53,7 +53,7 @@ module.exports = {
         include: /assets\/images/,
         use: [
           {
-            loader: 'file-loader?name=assets/[name].[ext]'
+            loader: 'file-loader?name=[path][name].[ext]&context=src'
           }
         ]
       },

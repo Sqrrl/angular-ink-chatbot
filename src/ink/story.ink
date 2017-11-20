@@ -42,7 +42,7 @@ VAR validationError = 0
 
 = capri_sun
 - That's pretty young. Want some Capri Sun?
-- <img src="/assets/capri-sun.png">
+- <img src="/assets/images/capri-sun.png">
 -> start_over
 
 = start_over
