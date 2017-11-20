@@ -25,3 +25,15 @@ $ npm build
 ```
 
 This creates/updates the bundled files, stored in the build directory.
+
+### Update Ink
+
+The story file is located under *src/ink/story.ink*.
+
+On a Mac:
+```bash
+$ npm run ink
+```
+
+Otherwise use Inky to export the story.ink file as JSON, or download inklecate for your OS from
+[https://github.com/inkle/ink](https://github.com/inkle/ink).
