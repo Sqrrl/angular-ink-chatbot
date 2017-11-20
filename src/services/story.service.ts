@@ -105,7 +105,6 @@ export class StoryService {
     return Object.assign({
       delay: (customOptions.sender === StoryPointSender.USER) ? 0 : 2000,
       sender: StoryPointSender.BOT,
-      typeDuration: 1000
     }, customOptions);
   }
 
