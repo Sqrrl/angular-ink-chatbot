@@ -4,6 +4,7 @@ let AngularCompilerPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
+let UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 let environment = require('./environment.prod');
 
 module.exports = {
@@ -99,7 +100,7 @@ module.exports = {
       excludeChunks: [],
     }),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.UglifyJsPlugin(),
+    new UglifyJsPlugin(),
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(environment)
     })
