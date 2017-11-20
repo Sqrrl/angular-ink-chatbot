@@ -2,6 +2,10 @@
 
 Learn more about the project here: [https://www.neoskop.de/blog](https://www.neoskop.de/blog)
 
+### Demo
+
+https://sqrrl.github.io/angular-ink-chatbot/
+
 ### Quickstart
 
 Verify that you are running at least node 7 and npm 4 by running node -v and npm -v in a terminal/console window.
