@@ -1,5 +1,0 @@
-export enum StoryEventType {
-  STORY_POINT_ADDED = 0,
-  USER_INTERACTION_STARTED = 1,
-  USER_INTERACTION_FINISHED = 2
-}
