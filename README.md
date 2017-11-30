@@ -1,6 +1,6 @@
 # Chatbot with Angular and Ink
 
-Learn more about the project here: [https://www.neoskop.de/blog](https://www.neoskop.de/blog)
+Learn more about the project here: [https://www.neoskop.de/blog/simple-chatbots-with-angular-and-ink](https://www.neoskop.de/blog/simple-chatbots-with-angular-and-ink)
 
 ### Demo
 
